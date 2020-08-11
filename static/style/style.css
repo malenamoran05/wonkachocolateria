@@ -1,0 +1,46 @@
+#instagram {
+    font-size: 2em;
+    color: #FD928A;
+}
+
+#whatsapp {
+    font-size: 2em;
+    color: #77D1B9;
+}
+
+#facebook {
+   font-size: 2em;
+}
+
+.links {
+   margin-left: 2%;
+   margin-right: 2%;
+}
+
+.img-fluid {
+max-width: 330px;
+max-height: 330px;
+object-fit: cover;
+
+}
+
+.card-img-top {
+   border-radius: 15px;
+}
+
+.caja1 {
+   min-width: 330px;
+   border-radius: 20% 5%;
+   width: 80%;
+   float: right; 
+   padding: 7px;
+   border: solid #FD928A 5px
+}
+
+.body {
+   text-align: center;
+}
+ 
+.envio {
+   border: solid #FD928A 5px
+}

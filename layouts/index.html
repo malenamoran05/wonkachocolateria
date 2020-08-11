@@ -1,0 +1,129 @@
+{{ define "main" }}
+
+<!-- banner -->
+{{ if .Site.Data.homepage.banner.enable }}
+{{ with .Site.Data.homepage.banner }}
+<section class="section-sm">
+  <div class="container">
+    <div class="row justify-content-between align-items-center">
+      <div class="col-lg-7 col-md-6 order-2 order-md-1">
+        <h1>Wonka Chocolatería</h1>
+        <p>Bienvenidos a la pagina de nuestra chocolateria, en esta encontraran nuestro menú de bombones, medallones y paletas! Pueden contactarnos por aquí</p>
+        <div  id="redes">
+          <a href="https://www.facebook.com/wonka.chocolateria.12"  class="links" target="_blank"><i class="fa fa-facebook-official" id="facebook" aria-hidden="true"></i></a>
+          <a href="https://www.instagram.com/wonka_chocolateria_colon/" class="links" target="_blank"><i class="fa fa-instagram" id="instagram" aria-hidden="true"></i></a>
+          <a href="https://api.whatsapp.com/send?phone=542473518674" class="links" target="_blank"><i class="fa fa-whatsapp" id="whatsapp" aria-hidden="true"></i></a>
+         </div>
+      
+       
+        <!-- Modal -->
+        <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content border-0 rounded-0">
+              <iframe width="560" height="315" src="" id="video" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+     
+      </div>
+      <div class="col-lg-5 col-md-6 order-1 order-lg-2">
+        <img src="{{ .image | absURL }}" class="img-fluid caja1" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+{{ end }}
+<!-- /banner -->
+
+<!-- about -->
+{{ if .Site.Data.homepage.about.enable }}
+{{ with .Site.Data.homepage.about }}
+<section class="section">
+  <div class="container">
+    <div class="row justify-content-around align-items-center">
+      <div class="col-lg-5 col-md-6">
+        <img class="img-fluid" src="{{ .image | absURL }}" alt="">
+      </div>
+      <div class="col-md-6 col-lg-5">
+        <h2>{{ .title | markdownify }}</h2>
+        <p>{{ .content | markdownify }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+{{ end }}
+<!-- /about -->
+
+
+
+<!-- material -->
+{{ if .Site.Data.homepage.material.enable }}
+{{ with .Site.Data.homepage.material }}
+<section class="section pb-0">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 mx-auto text-center">
+        <h2>{{ .title | markdownify }}</h2>
+        <p>{{ .subtitle | markdownify }}</p>
+      </div>
+    </div>
+    <div class="row">
+      {{ range .materialItem }}
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card border-0 text-center">
+          <img src="{{ .image | absURL }}" alt="material" class="card-img-top border-0">
+          <div class="card-body">
+            <h4>{{ .title | markdownify }}</h4>
+            <p>{{ .content | markdownify }}</p>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+{{ end }}
+<!-- /material -->
+
+
+<!-- products -->
+{{ if .Site.Data.homepage.products.enable }}
+<section class="section pb-0">
+  <div class="container" id="productos">
+    <div class="row">
+      <div class="col-12 text-center mb-4">
+        {{ with .Site.Data.homepage.products }}
+        <h2>{{ .title | markdownify }}</h2>
+        {{ end }}
+      </div>
+      {{ range first 10 (where .Site.RegularPages "Type" "products") }}
+      <div class="col-lg-6 col-sm-6 mb-4">
+        <div class="card border-0 text-center">
+          
+            {{ range first 1 .Params.Images }}
+            <img src="{{ .image | absURL }}" alt="{{ .Title }}" class="card-img-top">
+            {{ end }}
+
+          <div class="card-body">
+            <h4 class="h4">{{ .Title }}</h4>
+            <p>{{ .Params.Description }}</p>
+            <div class="mb-4">
+              <span class="lead text-primary">{{ .Params.Price }}</span>
+              <s>{{ .Params.PriceBefore }}</s>
+            </div>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+<!-- /products -->
+
+{{ end }}

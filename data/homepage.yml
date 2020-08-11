@@ -1,0 +1,154 @@
+############################ banner ##########################
+banner:
+  enable : true
+  title : "Best Beauty Cream For Your Skin"
+  content : "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+          dolore magna aliquyam erat, sed dia"
+  image : "images/caja1.jpg"
+  # button
+  button:
+    enable : true
+    label : "All Products"
+    link : "products"
+  # demo video
+  video:
+    enable : true
+    videoURL : "https://www.youtube.com/embed/wf4F2-9UXUo"
+
+########################## About ##############################
+about:
+  enable : true
+  title : "Los envíos son sólo en la localidad de Colón Bs. As. y son gratis!"
+  content : "En el caso de querer retirar el pedido, consultar dirección"
+  image : "images/envio.png"
+
+
+###################### Call to action ########################
+cta:
+  enable : true
+  title : "Buy one Get One Free Taba Cream"
+  content : "Available for limited time only. Grab one while you still can!"
+  image : "images/cta.png"
+  overlayImage : "images/cta-overlay.png"
+  button:
+    label : "All Products"
+    link : "products"
+
+######################## raw material #######################
+material:
+  enable : true
+  title : "Los tipos de rellenos:"
+  materialItem:
+    # material item loop
+    - title : "Frutilla"
+      image : "images/material/frutilla.jpg"
+      
+    # material item loop
+    - title : "Limón"
+      image : "images/material/limon.jpg"
+   
+      
+    # material item loop
+    - title : "Tiramisú"
+      image : "images/material/tiramisu.jpg"
+     
+      
+    # material item loop
+    - title : "Oreo"
+      image : "images/material/oreo.jpg"
+      
+
+    # material item loop
+    - title : "Banana"
+      image : "images/material/banana.jpg"
+     
+
+    # material item loop
+    - title : "Menta"
+      image : "images/material/menta.jpg"
+     
+
+    # material item loop
+    - title : "Chocolate"
+      image : "images/material/chocolate.jpg"
+     
+
+    # material item loop
+    - title : "Cereza"
+      image : "images/material/cereza.jpg"
+     
+
+    # material item loop
+    - title : "Marroc"
+      image : "images/material/material-4.png"
+
+         # material item loop
+    - title : "Dulce de Leche"
+      image : "images/material/dulcedeleche.jpg"
+     
+
+########################### Advantage #########################
+advantage:
+  enable : true
+  title : "Advantages Of Using <br> Our Product"
+  subtitle : "Lorem ipsum dolor sit amet, da decal consetetur<br> sadipscing elitr, sed diam nonumya eirmod"
+  image : "images/advantage.png"
+  advantageList:
+    # advantage list loop
+    - listItem : "Extremely lightweight"
+    - listItem : "Excellent breathability"
+    - listItem : "Can increase Cell activation"
+    - listItem : "Glowing Skin In 7 Days"
+    - listItem : "Increasing Glow Of Face"
+    - listItem : "More Beautiful Face Skin"
+
+
+######################## Promo Video ##########################
+video:
+  enable : true
+  title : "How To Use This Product?"
+  content : "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+          dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et."
+  videoThumb : "images/video-thumb.jpg"
+  videoURL : "https://www.youtube.com/embed/wf4F2-9UXUo"
+
+
+######################## Products #############################
+products:
+  enable : true
+  title : "Productos"
+  # product item comes from "content/products"
+
+
+########################## Testimonial ########################
+testimonial:
+  enable : true
+  title : "What People Are Saying <br> About Our Product"
+  testimonialItem:
+    # testimonial item loop
+    - name : "Angelo Perara"
+      image : "images/clients/client-1.jpg" # size 100px*100px
+      designation : "CEO, Dialogue Broad Band"
+      content : "Lorem ipsum dolor sit amet, <br> consetetur sadipscing elitr, diam <br> nonumy eirmod tempor"
+      rating : "five" # rating star, one to five
+      
+    # testimonial item loop
+    - name : "Riya Ventila"
+      image : "images/clients/client-2.jpg" # size 100px*100px
+      designation : "CEO, Dialogue Broad Band"
+      content : "Lorem ipsum dolor sit amet, <br> consetetur sadipscing elitr, diam <br> nonumy eirmod tempor"
+      rating : "three" # rating star, one to five
+      
+    # testimonial item loop
+    - name : "john Doe"
+      image : "images/clients/client-3.jpg" # size 100px*100px
+      designation : "CEO, Dialogue Broad Band"
+      content : "Lorem ipsum dolor sit amet, <br> consetetur sadipscing elitr, diam <br> nonumy eirmod tempor"
+      rating : "five" # rating star, one to five
+      
+    # testimonial item loop
+    - name : "Riya Ventila"
+      image : "images/clients/client-2.jpg" # size 100px*100px
+      designation : "CEO, Dialogue Broad Band"
+      content : "Lorem ipsum dolor sit amet, <br> consetetur sadipscing elitr, diam <br> nonumy eirmod tempor"
+      rating : "four" # rating star, one to five
