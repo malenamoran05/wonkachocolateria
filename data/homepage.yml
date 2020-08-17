@@ -80,7 +80,7 @@ material:
 
     # material item loop
     - title : "Marroc"
-      image : "images/material/material-4.png"
+      image : "images/material/marroc.jpg"
 
          # material item loop
     - title : "Dulce de Leche"
